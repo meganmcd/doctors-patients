@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal Page</title>
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
+    <link rel="stylesheet" type="text/css" href="styles/form.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">  
+</head>
+
+<body>
+
+    <center id="portal-container">
+     <div id="portal-button-container">
+        <h1 class="title">Infinity Health</h1>
+        <!--DOCTOR PORTAL LOGIN-->
+        <a href="doctor-login.html"><button id="doctor" href="doctor-login.html">DOCTOR LOGIN</button></a>
+         <!--END DOCTOR -->
+        <!--PATIENT PORTAL LOGIN-->
+        <button id="patient">PATIENT LOGIN</button>
+        <div id="patient-box">
+            <a href="#" id="patient-closing">X</a>
+        <!--FORM-->
+        <div class="container">
+                <div class="main">
+                   <h2 class="login">LOGIN</h2>
+                <form id="form_id" method="post" name="myform">
+                         <input type="text" name="username" id="username-pr" placeholder="Enter Username"/></br>
+                        <input type="password" name="password" id="password-pr" placeholder=" Enter Password"/></br>
+                        <input type="button" value="Login" id="submit" onclick="validate()"/>
+                </form>
+                    <div>
+                        <h6 style="line-height: 0em">Note : For this demo use following username and password.</h6> 
+                        <h6>User Name : ppp<br/>Password : ppp</h6>
+                    </div>
+                </div>
+        </div> 
+              
+        <!--END FORM-->
+        </div>
+        <!--END PATIENT-->
+            
+    </center>
+
+   <script src="js/patient.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script>
+
+  $(document).ready(function(){
+    $("#patient-box").hide();
+    $("#patient").click(function(){
+        $("#patient-box").toggle();
+    });
+
+});
+
+$(document).ready(function(){
+    $("#patient-box").hide();
+    $("#patient-closing").click(function(){
+        $("#patient-box").toggle();
+    });
+
+});
+
+  </script>  
+
+</body>
+</html>
+
+
